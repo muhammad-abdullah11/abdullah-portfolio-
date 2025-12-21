@@ -17,8 +17,6 @@ const iconMap = {
   javascript: <SiJavascript className="text-yellow-400" />,
   react: <SiReact className="text-cyan-400" />,
   nodejs: <SiNodedotjs className="text-green-500" />,
-  python: <SiPython className="text-blue-400" />,
-  php: <SiPhp className="text-indigo-400" />,
   git: <SiGit className="text-orange-500" />,
   html: <SiHtml5 className="text-orange-600" />,
   css: <SiCss3 className="text-blue-500" />,
@@ -57,26 +55,6 @@ const skills = [
     borderColor: "border-green-200"
   },
   {
-    icon: iconMap.python,
-    title: "Python",
-    description: "Full-stack development with Django, Flask, and building robust REST APIs for web applications.",
-    level: 75,
-    category: "Backend",
-    color: "from-blue-600 to-blue-800",
-    bgColor: "bg-blue-50",
-    borderColor: "border-blue-200"
-  },
-  {
-    icon: iconMap.php,
-    title: "PHP",
-    description: "Server-side scripting for legacy projects and WordPress-based development solutions.",
-    level: 70,
-    category: "Backend",
-    color: "from-purple-500 to-purple-700",
-    bgColor: "bg-purple-50",
-    borderColor: "border-purple-200"
-  },
-  {
     icon: iconMap.git,
     title: "Git & GitHub",
     description: "Version control mastery with Git, collaborative development, and CI/CD workflows.",
@@ -109,7 +87,7 @@ const skills = [
   {
     icon: iconMap.database,
     title: "Database Management",
-    description: "Working with SQL (MySQL, PostgreSQL) and NoSQL (MongoDB, Firebase) database systems.",
+    description: "Working with SQL (MySQL) and NoSQL (MongoDB) database systems.",
     level: 80,
     category: "Backend",
     color: "from-purple-600 to-purple-800",

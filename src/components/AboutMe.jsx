@@ -20,9 +20,10 @@ import {
 
 // Static data
 const heroSkills = [
-  "Frontend Development",
-  "React & Next.js",
+  "React & Node.js",
   "UI/UX Design",
+  "MERN STACK",
+  "Frontend Development",
   "Backend Development",
   "Full-Stack Solutions",
 ];
@@ -38,25 +39,9 @@ const techStack = [
 ];
 
 
-const faqs = [
-  {
-    q: "Which stack do you prefer for greenfield apps?",
-    a: "Next.js, JavaScript, REST/tRPC with validation, Prisma, and a managed Postgres/Mongo. Tailwind + shadcn/ui for UI.",
-  },
-  {
-    q: "Do you sign NDAs and work with existing teams?",
-    a: "Yes—standard NDA, and I fit into existing rituals while keeping communication async-friendly.",
-  },
-  {
-    q: "Can you improve performance on legacy apps?",
-    a: "Absolutely. I profile, set budgets, compress assets, lazy-load intelligently, and track regressions with CI checks.",
-  },
-];
-
 
 export default function AboutMe() {
   const [skillIndex, setSkillIndex] = useState(0);
-  const [faqOpen, setFaqOpen] = useState(null);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -64,8 +49,6 @@ export default function AboutMe() {
     }, 2000);
     return () => clearInterval(id);
   }, []);
-
-  const toggleFaq = (idx) => setFaqOpen((cur) => (cur === idx ? null : idx));
 
 
   return (
@@ -175,7 +158,7 @@ export default function AboutMe() {
           <div className="flex flex-wrap justify-center gap-4">
             {techStack.map((tech, index) => (
               <motion.span
-                key={tech.name}
+                key={index}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
@@ -188,53 +171,10 @@ export default function AboutMe() {
         </div>
       </section>
 
-      <section  className=" bg-white/60">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.h2
-            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            FAQ
-          </motion.h2>
-
-          <div className="divide-y divide-gray-200 rounded-2xl border border-gray-100 bg-white overflow-hidden">
-            {faqs.map((f, idx) => (
-              <div key={f.q} className="p-6">
-                <button
-                  className="w-full text-left flex items-center justify-between gap-4"
-                  aria-expanded={faqOpen === idx}
-                  onClick={() => toggleFaq(idx)}
-                >
-                  <span className="font-semibold">{f.q}</span>
-                  <FaChevronDown
-                    className={`transition ${
-                      faqOpen === idx ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                <AnimatePresence initial={false}>
-                  {faqOpen === idx && (
-                    <motion.div
-                      key="content"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25 }}
-                    >
-                      <p className="mt-3 text-gray-600">{f.a}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       <section  className="">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto p-6">
           <motion.div
             className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm"
             initial={{ opacity: 0, y: 10 }}

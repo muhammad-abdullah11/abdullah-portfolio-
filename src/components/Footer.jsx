@@ -168,7 +168,7 @@ function Footer() {
               <div>
                 <h4 className="text-sm font-semibold text-gray-200 mb-3">Technologies</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'Node.js', 'MongoDB', 'Next.js'].map((tech, index) => (
+                  {['React', 'Node.js', 'MongoDB', 'Express'].map((tech, index) => (
                     <span
                       key={index}
                       className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-xs border border-gray-700 hover:border-red-500 transition-colors cursor-pointer"

@@ -118,7 +118,7 @@ function ContactMe() {
                 <img
                   src={profileImg}
                   alt="Abdullah Khan"
-                  className="w-full h-80 object-cover rounded-xl"
+                  className="w-full h-80 object-fit rounded-xl"
                   loading="lazy"
                 />
               </div>

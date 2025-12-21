@@ -83,7 +83,6 @@ const SkillsAndEducation = () => {
               <div className="flex flex-wrap gap-3">
                 <SkillBadge icon={FaCode} skill="Git / GitHub" />
                 <SkillBadge icon={FaCode} skill="VS Code" delay={0.1} />
-                <SkillBadge icon={FaFigma} skill="Figma" delay={0.2} />
               </div>
             </div>
 
