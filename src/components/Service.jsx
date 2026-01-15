@@ -286,7 +286,7 @@ function WhatIDo() {
   return (
     <motion.section 
       ref={ref}
-      className="py-20 px-6 relative bg-gradient-to-br from-gray-50 via-white to-red-50 overflow-hidden"
+      className="py-20 px-6 relative bg-gradient-to-br from-gray-50 via-white to-red-50 overflow-hidden my-4"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
@@ -353,15 +353,7 @@ function WhatIDo() {
             </motion.h2>
           </motion.div>
 
-          <motion.p 
-            className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            With <span className="font-bold text-red-600">7+ years of experience</span> building innovative software solutions for clients worldwide. 
-            Here's my technical arsenal that drives exceptional results.
-          </motion.p>
+         
         </div>
 
         {/* Category Filter */}

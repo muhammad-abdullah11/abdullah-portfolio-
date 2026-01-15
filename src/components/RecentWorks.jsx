@@ -102,7 +102,7 @@ export default function RecentWork() {
       : portfolio.filter((p) => p.category === active);
 
   return (
-    <section className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-6">
+    <section className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-6 my-4">
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-12">
         <motion.h1

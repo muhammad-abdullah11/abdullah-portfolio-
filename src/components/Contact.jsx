@@ -85,7 +85,7 @@ function ContactMe() {
   };
 
   return (
-    <section className="w-full min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+    <section className="w-full min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden my-4">
       <div className="absolute inset-0">
         <div className="absolute top-20 right-24 w-72 h-72 bg-gradient-to-r from-red-200 to-pink-200 rounded-full opacity-10 animate-pulse"></div>
         <div className="absolute bottom-16 left-16 w-96 h-96 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full opacity-10 animate-pulse delay-1000"></div>

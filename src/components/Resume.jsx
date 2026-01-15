@@ -22,7 +22,7 @@ const SkillBadge = ({ icon: Icon, skill, delay = 0 }) => (
 
 const SkillsAndEducation = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-8 my-4">
       <div className="max-w-6xl mx-auto space-y-16">
         
         <motion.div 

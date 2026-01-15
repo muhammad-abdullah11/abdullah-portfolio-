@@ -9,7 +9,7 @@ function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="fixed top-0 left-0 w-full h-16 bg-white shadow-lg z-50 flex justify-between items-center px-6 py-4">
+    <header className="fixed top-0 left-0 w-full h-16 bg-white shadow-lg z-50 flex justify-between items-center px-6 py-4 ">
       {/* Left: Logo */}
       <img
         src={PorfilePic}

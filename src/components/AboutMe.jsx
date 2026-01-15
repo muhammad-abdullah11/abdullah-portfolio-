@@ -52,7 +52,7 @@ export default function AboutMe() {
 
 
   return (
-    <div className="w-screen min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
+    <div className="w-screen min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden my-4">
 
       <section  className="relative overflow-hidden pb-28">
         <div className="max-w-7xl mx-auto px-6 pt-24 lg:pt-32">
