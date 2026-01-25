@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import ProfilePic from "../assests/Abdullah.jpg";
 import SocialMedia from "./SocialMedia"
 
-// React Icons 
 import {
   FaBolt,
   FaReact,
@@ -18,7 +17,6 @@ import {
   FaPhone,
 } from "react-icons/fa";
 
-// Static data
 const heroSkills = [
   "React & Node.js",
   "UI/UX Design",

@@ -1,4 +1,3 @@
-// RecentWork.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -12,10 +11,19 @@ import {
 import Projects from "../assests/projects.json"
 import { useNavigate } from "react-router-dom";
 
-/* Filter categories */
-const categories = ["All", "Web", "Dashboard", "API"];
+const categoryMap = {
+  "All": "All",
+  "E-Commerce": "E-Commerce / Food Tech",
+  "Social Media": "Social Media / Networking",
+  "EdTech Mgmt": "EdTech / Management",
+  "Mobility": "Mobility / Logistics",
+  "Travel": "PropTech / Travel",
+  "Learning": "EdTech / E-Commerce",
+  "Utility": "Utility / Microservice"
+};
 
-/* Motion presets */
+const categories = Object.keys(categoryMap);
+
 const cardInitial = { opacity: 0, scale: 0.96 };
 const cardAnimate = (i) => ({
   opacity: 1,
@@ -28,14 +36,13 @@ export default function RecentWork() {
   const navigate  = useNavigate();
   const [active, setActive] = useState("All");
 
-  // const filtered =
-  //   active === "All"
-  //     ? portfolio
-  //     : portfolio.filter((p) => p.category === active);
+  const filtered =
+    active === "All"
+      ? Projects
+      : Projects.filter((p) => p.category.includes(categoryMap[active]));
 
   return (
     <section className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-6 my-4">
-      {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-12">
         <motion.h1
           initial={{ opacity: 0, y: -24 }}
@@ -57,7 +64,6 @@ export default function RecentWork() {
         </motion.p>
       </div>
 
-      {/* Filters */}
       <div className="max-w-7xl mx-auto mb-10 flex justify-center gap-4">
         {categories.map((cat) => (
           <motion.button
@@ -79,17 +85,15 @@ export default function RecentWork() {
         ))}
       </div>
 
-      {/* Grid */}
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Projects.map((item, idx) => (
+          {filtered.map((item, idx) => (
             <motion.article
               key={item.id}
               initial={cardInitial}
               animate={cardAnimate(idx)}
               className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 cursor-default"
             >
-              {/* Image */}
               <div className="h-48 w-full overflow-hidden bg-gray-50">
                 <img
                 onClick={()=>navigate(`/project/${item.id}`)}
@@ -99,7 +103,6 @@ export default function RecentWork() {
                 />
               </div>
 
-              {/* Content */}
               <div className="p-5">
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="flex items-center gap-3">

@@ -8,7 +8,6 @@ function Footer() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  // Quick navigation links
   const quickLinks = [
     { name: 'About Me', path: '/' },
     { name: 'Services', path: '/services' },
@@ -17,7 +16,6 @@ function Footer() {
     { name: 'Contact', path: '/contact' },
   ];
 
-  // List of services offered
   const services = [
     'Web Development',
     'Frontend Development',
@@ -27,7 +25,6 @@ function Footer() {
     'API Integration',
   ];
 
-  // Legal links for footer bottom section
   const legalLinks = [
     'Privacy Policy',
     'Terms of Service',
@@ -35,7 +32,6 @@ function Footer() {
     'Disclaimer',
   ];
 
-  // Handle email subscription
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (email.trim()) {
@@ -47,20 +43,14 @@ function Footer() {
 
   return (
     <footer className="w-screen mt-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
-      
-      {/* Soft gradient background for depth */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-600/20 to-transparent"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-l from-red-600/10 to-transparent rounded-full"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        
-        {/* Top Section */}
         <div className="px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            
-            {/* Brand Info */}
             <div className="space-y-6">
               <div>
                 <h1 className="text-3xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent mb-2">
@@ -71,13 +61,11 @@ function Footer() {
                 </p>
               </div>
 
-              {/* Social Media Section */}
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-gray-200">Connect With Me</h3>
                 <SocialMedia />
               </div>
 
-              {/* Contact Info */}
               <div className="space-y-2 text-sm text-gray-300">
                 <p className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -92,7 +80,6 @@ function Footer() {
               </div>
             </div>
 
-            {/* Quick Links Section */}
             <div className="space-y-6">
               <h3 className="text-lg font-semibold text-gray-200 border-b border-red-500/30 pb-2">
                 Quick Links
@@ -112,7 +99,6 @@ function Footer() {
               </ul>
             </div>
 
-            {/* Services Section */}
             <div className="space-y-6">
               <h3 className="text-lg font-semibold text-gray-200 border-b border-red-500/30 pb-2">
                 Services
@@ -130,7 +116,6 @@ function Footer() {
               </ul>
             </div>
 
-            {/* Newsletter Signup */}
             <div className="space-y-6">
               <h3 className="text-lg font-semibold text-gray-200 border-b border-red-500/30 pb-2">
                 Stay Updated
@@ -164,7 +149,6 @@ function Footer() {
                 </button>
               </form>
 
-              {/* Skill Tags */}
               <div>
                 <h4 className="text-sm font-semibold text-gray-200 mb-3">Technologies</h4>
                 <div className="flex flex-wrap gap-2">
@@ -182,14 +166,10 @@ function Footer() {
           </div>
         </div>
 
-        {/* Divider Line */}
         <div className="border-t border-gray-700"></div>
 
-        {/* Bottom Footer Section */}
         <div className="px-6 py-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
-            
-            {/* Copyright Info */}
             <div className="text-center lg:text-left">
               <p className="text-gray-400 text-sm">
                 © {new Date().getFullYear()} Abdullah Khan. All rights reserved.
@@ -199,7 +179,6 @@ function Footer() {
               </p>
             </div>
 
-            {/* Legal Links */}
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               {legalLinks.map((link, index) => (
                 <button
@@ -211,7 +190,6 @@ function Footer() {
               ))}
             </div>
 
-            {/* Back to Top Button */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110"
