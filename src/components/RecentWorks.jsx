@@ -9,78 +9,8 @@ import {
   FaCloud,
 } from "react-icons/fa";
 
-const images = [
-  "https://images.unsplash.com/photo-1590608897129-79da98d1591c?w=1400&h=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1400&h=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&h=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1400&h=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1400&h=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&h=900&auto=format&fit=crop",
-];
-
-/* MERN-focused portfolio projects */
-const portfolio = [
-  {
-    id: 1,
-    title: "E-Commerce Analytics Dashboard",
-    category: "Dashboard",
-    description:
-      "Full MERN dashboard showing conversions, user funnels, and real-time revenue.",
-    tech: ["React", "Node.js", "MongoDB"],
-    image: images[0],
-    icon: <FaChartBar className="text-gray-600" />,
-  },
-  {
-    id: 2,
-    title: "Corporate Landing Page",
-    category: "Web",
-    description:
-      "High-performance marketing landing built with React UI components.",
-    tech: ["React", "JavaScript", "Vite"],
-    image: images[1],
-    icon: <FaLaptopCode className="text-gray-600" />,
-  },
-  {
-    id: 3,
-    title: "SaaS Admin Portal",
-    category: "Dashboard",
-    description:
-      "Admin panel built with MERN, role-based access, and analytics widgets.",
-    tech: ["React", "Express", "MongoDB"],
-    image: images[2],
-    icon: <FaCogs className="text-gray-600" />,
-  },
-  {
-    id: 4,
-    title: "Marketing Campaign Manager",
-    category: "Web",
-    description:
-      "Tool for scheduling campaigns, tracking metrics, and uploading creative assets.",
-    tech: ["React", "Express API", "Node.js"],
-    image: images[3],
-    icon: <FaLaptopCode className="text-gray-600" />,
-  },
-  {
-    id: 5,
-    title: "Client CRM Platform",
-    category: "API",
-    description:
-      "CRM backend with MongoDB, REST APIs, and secure authentication.",
-    tech: ["Node.js", "Express", "MongoDB"],
-    image: images[4],
-    icon: <FaDatabase className="text-gray-600" />,
-  },
-  {
-    id: 6,
-    title: "Cloud File Storage Service",
-    category: "API",
-    description:
-      "Node.js microservice for uploads, metadata indexing, and cloud integration.",
-    tech: ["Node.js", "Express", "Cloudinary"],
-    image: images[5],
-    icon: <FaCloud className="text-gray-600" />,
-  },
-];
+import Projects from "../assests/projects.json"
+import { useNavigate } from "react-router-dom";
 
 /* Filter categories */
 const categories = ["All", "Web", "Dashboard", "API"];
@@ -94,12 +24,14 @@ const cardAnimate = (i) => ({
 });
 
 export default function RecentWork() {
+
+  const navigate  = useNavigate();
   const [active, setActive] = useState("All");
 
-  const filtered =
-    active === "All"
-      ? portfolio
-      : portfolio.filter((p) => p.category === active);
+  // const filtered =
+  //   active === "All"
+  //     ? portfolio
+  //     : portfolio.filter((p) => p.category === active);
 
   return (
     <section className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-6 my-4">
@@ -150,7 +82,7 @@ export default function RecentWork() {
       {/* Grid */}
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filtered.map((item, idx) => (
+          {Projects.map((item, idx) => (
             <motion.article
               key={item.id}
               initial={cardInitial}
@@ -160,7 +92,8 @@ export default function RecentWork() {
               {/* Image */}
               <div className="h-48 w-full overflow-hidden bg-gray-50">
                 <img
-                  src={item.image}
+                onClick={()=>navigate(`/project/${item.id}`)}
+                  src={item.thumbnail}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
@@ -170,24 +103,21 @@ export default function RecentWork() {
               <div className="p-5">
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-gray-100 rounded-md">
-                      {item.icon}
-                    </div>
                     <h3 className="text-lg font-semibold text-gray-900">
                       {item.title}
                     </h3>
                   </div>
-                  <span className="text-sm text-gray-500 font-medium">
+                  <span className="text-xs text-gray-500 font-medium">
                     {item.category}
                   </span>
                 </div>
 
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-600 mb-4 line-clamp-3 ">
                   {item.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2">
-                  {item.tech.map((t) => (
+                  {item.tags.map((t) => (
                     <span
                       key={t}
                       className="text-xs font-medium bg-gray-100 text-gray-700 px-2 py-1 rounded-full border border-gray-200"

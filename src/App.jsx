@@ -7,7 +7,7 @@ import ContactMe from './components/Contact'
 import RecentWorks from './components/RecentWorks'
 import Resume from './components/Resume'
 import Service from './components/Service'
-
+import Project from "./components/Project";
 
 export default function App() {
   return (
@@ -19,8 +19,8 @@ export default function App() {
         <Route path="/recent-work" element={<RecentWorks />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/services" element={<Service />} />
+        <Route path ="/project/:id" element={<Project/>}/>
       </Routes>
-
       <Footer />
     </div>
   );
