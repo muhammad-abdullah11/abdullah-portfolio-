@@ -118,17 +118,11 @@ export default function RecentWork() {
 
   const navigate = useNavigate();
   const [active, setActive] = useState("All");
-
+  const filterType=["All","MERN Stack","Next.js"]
   const filtered =
     active === "All"
       ? Projects
-      : Projects.filter((p) => {
-        const key = categoryMap[active];
-        if (Array.isArray(key)) {
-          return key.some(k => p.category.includes(k));
-        }
-        return p.category.includes(key);
-      });
+      : Projects.filter((p) => p.techStack[0]==active);
 
   return (
     <section className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-6 my-4 perspective-1000">
@@ -149,19 +143,19 @@ export default function RecentWork() {
           className="text-gray-600 max-w-3xl mx-auto mt-4"
         >
           Selected projects built using the MERN stack—MongoDB, Express,
-          React, and Node.js.
+          React, and Node.js & Next.js.
         </motion.p>
       </div>
 
-      <div className="max-w-7xl mx-auto mb-10 flex justify-center gap-4">
-        {categories.map((cat) => (
+      <div className="max-w-7xl mx-auto mb-10 flex flex-wrap justify-center gap-4">
+        {filterType.map((cat) => (
           <motion.button
             key={cat}
             onClick={() => setActive(cat)}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
-            className={`px-4 py-2 rounded-full font-medium border transition ${active === cat
+            className={`px-4 py-2 rounded-xl font-medium border transition ${active === cat
               ? "bg-gray-800 text-white border-gray-800"
               : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
               }`}
