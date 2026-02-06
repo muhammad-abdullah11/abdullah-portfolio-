@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProfilePic from "../assests/Abdullah.jpg";
 import SocialMedia from "./SocialMedia"
@@ -18,9 +18,10 @@ import {
 } from "react-icons/fa";
 
 const heroSkills = [
-  "React & Node.js",
-  "UI/UX Design",
+  "React",
   "MERN STACK",
+  "Next.js",
+  "UI/UX Design",
   "Frontend Development",
   "Backend Development",
   "Full-Stack Solutions",
@@ -52,7 +53,7 @@ export default function AboutMe() {
   return (
     <div className="w-screen min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden my-4">
 
-      <section  className="relative overflow-hidden pb-28">
+      <section className="relative overflow-hidden pb-28">
         <div className="max-w-7xl mx-auto px-6 pt-24 lg:pt-32">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             {/* Left Side: Text & Info */}
@@ -108,7 +109,8 @@ export default function AboutMe() {
                   <FaExternalLinkAlt /> View My Work
                 </a>
                 <a
-                  href="/Abdullah_CV.pdf"
+                  download
+                  href="/CV.docx"
                   className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-semibold hover:border-red-600 hover:text-red-600 transition-all duration-300 inline-flex items-center gap-2"
                 >
                   <FaDownload /> Download CV
@@ -143,7 +145,7 @@ export default function AboutMe() {
         </div>
       </section>
 
-      <section  className="">
+      <section className="">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.h3
             initial="hidden"
@@ -169,9 +171,9 @@ export default function AboutMe() {
         </div>
       </section>
 
-      
 
-      <section  className="">
+
+      <section className="">
         <div className="max-w-5xl mx-auto p-6">
           <motion.div
             className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm"
@@ -184,7 +186,7 @@ export default function AboutMe() {
                 <h3 className="text-2xl font-bold">
                   Let's build something great
                 </h3>
-               </div>
+              </div>
               <div className="flex md:justify-end gap-3">
                 <a
                   href="mailto:abdullahworld111@gmail.com"
