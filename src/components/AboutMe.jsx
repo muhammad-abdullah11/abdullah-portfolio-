@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProfilePic from "../assests/Abdullah.jpg";
+import PointerImage from "../assests/pointerImage.jpg"
 import SocialMedia from "./SocialMedia"
 
 import {
@@ -36,10 +37,41 @@ const techStack = [
   { name: "Tailwind CSS", icon: <FaLayerGroup /> },
   { name: "Framer Motion", icon: <FaBolt /> },
 ];
+const gradients = [
+  "bg-[#99E1D9]",
+  "bg-[#00b4d8]",
+  "bg-[#e63946]",
+  "bg-[#31572c]",
+  "bg-[#adc178]",
+  "bg-[#ffb703]",
+  "bg-[#03045e]",
+  "bg-[#e9c46a]",
+  "bg-[#00a5cf]",
+  "bg-[#274c77]",
 
+];
 
 
 export default function AboutMe() {
+
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [gradientIndex, setGradientIndex] = useState(Math.floor(Math.random() * gradients.length));
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+      console.log(e.clientX, e.clientY);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   const [skillIndex, setSkillIndex] = useState(0);
 
   useEffect(() => {
@@ -51,7 +83,28 @@ export default function AboutMe() {
 
 
   return (
-    <div className="w-screen min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden my-4">
+    <div className="w-screen min-h-screen bg-gradient-to-br from-slate-100 via-white to-blue-50 overflow-hidden my-4">
+
+      <motion.div
+        className={`fixed pointer-events-none h-10 rounded-full px-2 py-1 z-50 shadow-lg flex items-center gap-2 ${gradients[gradientIndex]}`}
+        animate={{
+          x: mousePosition.x + 20,
+          y: mousePosition.y + 20,
+        }}
+        transition={{
+          type: "spring",
+          damping: 30,
+          stiffness: 200,
+          mass: 0.5,
+        }}
+      >
+        <img
+          src={PointerImage}
+          alt="Abdullah"
+          className="w-8 h-8 rounded-full p-0 border-2 border-white object-cover scale-110"
+        />
+        <h2 className="text-sm font-bold ">Abdullah</h2>
+      </motion.div>
 
       <section className="relative overflow-hidden pb-28">
         <div className="max-w-7xl mx-auto px-6 pt-24 lg:pt-32">
