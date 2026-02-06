@@ -11,15 +11,15 @@ import {
 import Projects from "../assests/projects.json"
 import { useNavigate } from "react-router-dom";
 
-const categoryMap = {
-  "All": "All",
-  "E-Commerce": "E-Commerce",
-  "Social Media": "Social Media",
-  "EdTech": "EdTech",
-  "Service Base": ["Mobility", "Travel", "Utility", "PropTech"]
-};
+// const categoryMap = {
+//   "All": "All",
+//   "E-Commerce": "E-Commerce",
+//   "Social Media": "Social Media",
+//   "EdTech": "EdTech",
+//   "Service Base": ["Mobility", "Travel", "Utility", "PropTech"]
+// };
 
-const categories = Object.keys(categoryMap);
+// const categories = Object.keys(categoryMap);
 
 const cardInitial = { opacity: 0, scale: 0.96 };
 const cardAnimate = (i) => ({
@@ -118,7 +118,7 @@ export default function RecentWork() {
 
   const navigate = useNavigate();
   const [active, setActive] = useState("All");
-  const filterType=["All","MERN Stack","Next.js"]
+  const filterType=["All","MERN Stack","Next.js","React"]
   const filtered =
     active === "All"
       ? Projects
