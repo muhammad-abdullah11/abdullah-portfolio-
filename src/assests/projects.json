@@ -44,9 +44,9 @@
             "MongoDB",
             "Tailwind"
         ],
-            "techStack": [
-                "MERN Stack"
-            ],
+        "techStack": [
+            "MERN Stack"
+        ],
         "links": {
             "github": "https://github.com/muhammad-abdullah11/pakBites",
             "live": ""
@@ -130,13 +130,34 @@
         "icon": "GraduationCap",
         "thumbnail": "https://media.istockphoto.com/id/498445859/photo/learning-management-system.webp?a=1&b=1&s=612x612&w=0&k=20&c=j5L314xGY2N5rii1BfpMbe9tp9XYdhejnfzj92CdVF8=",
         "images": [
-            "https://res.cloudinary.com/demo/image/upload/v1/lms/admin-dash.png",
-            "https://res.cloudinary.com/demo/image/upload/v2/lms/course-view.png",
-            "https://res.cloudinary.com/demo/image/upload/v3/lms/attendance.png",
-            "https://res.cloudinary.com/demo/image/upload/v4/lms/grading.png",
-            "https://res.cloudinary.com/demo/image/upload/v5/lms/student-portal.png",
-            "https://res.cloudinary.com/demo/image/upload/v6/lms/announcements.png",
-            "https://res.cloudinary.com/demo/image/upload/v7/lms/user-management.png"
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824761/uploads_folder/Capture_cqvdqi.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824765/uploads_folder/Capture1_ya0r0f.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture10_ae5u7g.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824760/uploads_folder/Capture11_uasdr0.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824759/uploads_folder/Capture12_tetciy.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture13_yagxxm.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture14_cgfifw.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture15_jsw2ik.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824757/uploads_folder/Capture16_wxxeec.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture17_irybyr.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824757/uploads_folder/Capture18_phsoij.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824755/uploads_folder/Capture19_xv123g.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824757/uploads_folder/Capture2_kwtw6m.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture20_rsewlo.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture21_pmtswr.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824767/uploads_folder/Capture22_njqwbq.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824770/uploads_folder/Capture23_idpf4t.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824756/uploads_folder/Capture24_minzg9.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824756/uploads_folder/Capture25_sfbzmk.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824782/uploads_folder/Capture26_yhv4go.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture27_bt0ykc.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture3_mx5ebj.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824757/uploads_folder/Capture4_hly0lx.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824762/uploads_folder/Capture5_jwhzxc.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824778/uploads_folder/Capture6_aoxarm.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824755/uploads_folder/Capture7_xfceot.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture8_e5nq72.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824756/uploads_folder/Capture9_cbxexk.png"
         ],
         "description": "Scholarly LMS is an enterprise-grade education management platform that digitizes the entire academic workflow. It handles multi-role hierarchies, real-time messaging, and comprehensive data tracking for modern educational institutions.",
         "role": "System Architect & Dev",
@@ -366,13 +387,14 @@
         "icon": "Link",
         "thumbnail": "https://media.istockphoto.com/id/598821796/photo/url-button-text.webp?a=1&b=1&s=612x612&w=0&k=20&c=QxpVe5cTwimheFp1jlEUa89HlUGc_Oasuas4NN4_le4=",
         "images": [
-            "https://res.cloudinary.com/demo/image/upload/v1/url/home.png",
-            "https://res.cloudinary.com/demo/image/upload/v2/url/stats.png",
-            "https://res.cloudinary.com/demo/image/upload/v3/url/custom-alias.png",
-            "https://res.cloudinary.com/demo/image/upload/v4/url/qr-codes.png",
-            "https://res.cloudinary.com/demo/image/upload/v5/url/history.png",
-            "https://res.cloudinary.com/demo/image/upload/v6/url/export.png",
-            "https://res.cloudinary.com/demo/image/upload/v7/url/settings.png"
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture_qftox8.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture6_pfbyqv.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783002/Capture7_ikxnts.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783000/Capture1_fz7slh.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture2_g4bkyi.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783000/Capture3_fd3qlk.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture5_gmhfix.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture4_y4e7vd.png"
         ],
         "description": "A high-efficiency microservice designed for link management. It provides instant URL shortening, custom brand-able aliases, and real-time click tracking with QR code integration.",
         "role": "Backend-focused Developer",
@@ -415,38 +437,38 @@
             "documentation": "https://github.com/yourusername/miniurl/blob/main/README.md"
         }
     },
-  {
-    "id": "08",
-    "title": "The Rhythm Room",
-    "category": "Music / Events",
-    "type": "Web Application",
-    "icon": "Music",
-    "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=60",
-    "images": [
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&auto=format&fit=crop&q=60",
-      "https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1200&auto=format&fit=crop&q=60",
-      "https://images.unsplash.com/photo-1506152983158-2c8c9b1a7d3b?w=1200&auto=format&fit=crop&q=60"
-    ],
-    "description": "A Next.js site for music courses, events, blogs and galleries. Built with a mobile-first responsive design and server-rendered pages for SEO.",
-    "role": "Full Stack Engineer",
-    "tech": {
-      "frontend": [
-        "Next.js",
-        "React",
-        "Tailwind CSS",
-        "shadcn ui"
-      ],
-      "backend": [
-        "Next.js API Routes"
-      ],
-      "services": [
-        "Vercel (deployment)",
-        "JWT Auth (optional)"
-      ]
-    },
-    "techStack": [
-      "Next.js"
-    ],
+    {
+        "id": "08",
+        "title": "The Rhythm Room",
+        "category": "Music / Events",
+        "type": "Web Application",
+        "icon": "Music",
+        "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1506152983158-2c8c9b1a7d3b?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A Next.js site for music courses, events, blogs and galleries. Built with a mobile-first responsive design and server-rendered pages for SEO.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "Next.js",
+                "React",
+                "Tailwind CSS",
+                "shadcn ui"
+            ],
+            "backend": [
+                "Next.js API Routes"
+            ],
+            "services": [
+                "Vercel (deployment)",
+                "JWT Auth (optional)"
+            ]
+        },
+        "techStack": [
+            "Next.js"
+        ],
         "tags": [
             "Next.js",
             "React",
@@ -468,60 +490,60 @@
         }
     },
     {
-    "id": "09",
-    "title": "Quizee",
-    "category": "EdTech / Learning",
-    "type": "Web Application",
-    "icon": "GraduationCap",
-    "thumbnail": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&auto=format&fit=crop&q=60",
-    "images": [
-        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&auto=format&fit=crop&q=60",
-        "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&auto=format&fit=crop&q=60",
-        "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&auto=format&fit=crop&q=60"
-    ],
-    "description": "An interactive flashcard and study application inspired by Quizlet. Built with React and Vite, Quizee helps students master any subject through beautifully designed flashcards, dynamic carousels, and an intuitive learning experience.",
-    "role": "Full Stack Engineer",
-    "tech": {
-        "frontend": [
+        "id": "09",
+        "title": "Quizee",
+        "category": "EdTech / Learning",
+        "type": "Web Application",
+        "icon": "GraduationCap",
+        "thumbnail": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "An interactive flashcard and study application inspired by Quizlet. Built with React and Vite, Quizee helps students master any subject through beautifully designed flashcards, dynamic carousels, and an intuitive learning experience.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React",
+                "Vite",
+                "Tailwind CSS",
+                "React Router"
+            ],
+            "backend": [
+                "Static (Client-side only)"
+            ],
+            "services": [
+                "Vercel (deployment)",
+                "FontAwesome Icons"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
             "React",
             "Vite",
             "Tailwind CSS",
-            "React Router"
+            "React Router",
+            "FontAwesome",
+            "Education",
+            "Flashcards"
         ],
-        "backend": [
-            "Static (Client-side only)"
+        "links": {
+            "github": "https://github.com/muhammad-abdullah11/quieee",
+            "live": "https://quizee-kappa.vercel.app/"
+        },
+        "ui_features": [
+            "Interactive flashcard browsing system",
+            "Dynamic carousel for featured topics",
+            "Responsive mobile-first design",
+            "Pagination for large study sets",
+            "Smooth animations and transitions",
+            "Study sets across multiple subjects (Languages, Science, History)"
         ],
-        "services": [
-            "Vercel (deployment)",
-            "FontAwesome Icons"
-    ]
-    },
-    "techStack": [
-        "React"
-    ],
-    "tags": [
-        "React",
-        "Vite",
-        "Tailwind CSS",
-        "React Router",
-        "FontAwesome",
-        "Education",
-        "Flashcards"
-    ],
-    "links": {
-        "github": "https://github.com/muhammad-abdullah11/quieee",
-        "live": "https://quizee-kappa.vercel.app/"
-    },
-    "ui_features": [
-        "Interactive flashcard browsing system",
-        "Dynamic carousel for featured topics",
-        "Responsive mobile-first design",
-        "Pagination for large study sets",
-        "Smooth animations and transitions",
-        "Study sets across multiple subjects (Languages, Science, History)"
-    ],
-    "online_resources": {
-        "documentation": "https://github.com/muhammad-abdullah11/quieee/README.md"
+        "online_resources": {
+            "documentation": "https://github.com/muhammad-abdullah11/quieee/README.md"
+        }
     }
-}
 ]
