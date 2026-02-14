@@ -13,9 +13,9 @@ const Project = () => {
   const { scrollYProgress } = useScroll();
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [id]);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }, [id]);
 
   if (!project) {
     return (
@@ -101,12 +101,12 @@ const Project = () => {
               <div className="flex flex-wrap justify-center gap-6 md:gap-10 items-center px-4">
                 {project.links.live && (
                   <MagneticButton href={project.links.live} primary>
-                    Launch <FaChevronRight className="text-[10px]" />
+                    Launch <FaChevronRight className="text-lg" />
                   </MagneticButton>
                 )}
                 {project.links.github && (
                   <MagneticButton href={project.links.github}>
-                    Code <FaGithub className="text-lg" />
+                    Code <FaGithub className="text-2xl" />
                   </MagneticButton>
                 )}
               </div>
@@ -114,7 +114,7 @@ const Project = () => {
           </div>
         </section>
 
-        <section className="py-20 md:py-40 px-4 md:px-6 bg-white border-y border-[#f1f5f3]">
+        <section className="py-10 px-4 bg-red-400 border-y border-[#f1f5f3]">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-10 md:gap-20">
               <DetailCard
@@ -144,10 +144,10 @@ const Project = () => {
                       whileHover={{ x: 10 }}
                       className="flex items-center gap-4 md:gap-6 group/item"
                     >
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-[#a4c3b2] text-lg md:text-xl font-black shrink-0">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-[#a4c3b2] text-lg md:text-xl font-black">
                         0{i + 1}
                       </div>
-                      <p className="text-white/80 font-medium text-base md:text-lg leading-snug">{feature}</p>
+                      <p className="text-white/80 font-medium text-sm md:text-base leading-snug">{feature}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -156,8 +156,8 @@ const Project = () => {
           </div>
         </section>
 
-        <section className="bg-[#fbfcfa] py-24 md:py-60 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 mb-24 md:mb-60 text-center">
+        <section className="bg-[#fbfcfa] py-10 md:py-20 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6 mb-6 md:mb-10 text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -271,12 +271,12 @@ const DetailCard = ({ title, subtitle, icon, color, children, dark }) => {
 
 const StackCategory = ({ title, items }) => (
   <div className="group/cat">
-    <h4 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#a4c3b2] mb-6 md:mb-8">{title}</h4>
+    <h4 className="text-xl font-black uppercase tracking-[0.5em] text-[#a4c3b2] mb-6 md:mb-8">{title}</h4>
     <div className="flex flex-wrap gap-3 md:gap-4">
       {items.map((item, i) => (
         <div
           key={i}
-          className="px-6 md:px-8 py-2 md:py-3 rounded-xl md:rounded-2xl bg-white border border-[#f1f5f3] text-[#2d3a33] font-bold text-sm md:text-lg shadow-sm"
+          className="px-6 md:px-8 py-2 rounded-xl md:rounded-2xl bg-white border border-[#f1f5f3] text-[#2d3a33] font-bold text-xs shadow-sm"
         >
           {item}
         </div>

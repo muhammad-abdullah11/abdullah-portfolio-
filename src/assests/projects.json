@@ -545,5 +545,60 @@
         "online_resources": {
             "documentation": "https://github.com/muhammad-abdullah11/quieee/README.md"
         }
+    },
+    {
+        "id": "10",
+        "title": "Pookie Games",
+        "category": "Gaming / Entertainment",
+        "type": "Web Application",
+        "icon": "Gamepad",
+        "thumbnail": "https://images.unsplash.com/photo-1668901382969-8c73e450a1f5?w=600&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1668901382969-8c73e450a1f5?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A modern, high-performance mini-games hub featuring a collection of classic arcade and logic games. Starting with a sleek Tic-Tac-Toe implementation, Pookie Games focuses on smooth state management, responsive bento-grid layouts, and a seamless user experience.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite 7",
+                "Tailwind CSS v4",
+                "React Router"
+            ],
+            "backend": [
+                "Static (Client-side only)"
+            ],
+            "services": [
+                "Vercel (deployment)",
+                "React Icons"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Gamin",
+            "Bento Grid",
+            "Logic Games",
+            "Web Portals"
+        ],
+        "links": {
+            "github": "https://github.com/muhammad-abdullah11/pookie-games",
+            "live": "https://pookie-games-11.vercel.app/"
+        },
+        "ui_features": [
+            "Interactive Bento-style dashboard",
+            "Dynamic game loading system via JSON configuration",
+            "Responsive grid layout (Col-span 2 for featured games)",
+            "Smooth page transitions with React Router",
+            "Hover-responsive game cards with dynamic overlays",
+            "Fully optimized for mobile and desktop gameplay"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/muhammad-abdullah11/pookie-games/blob/main/README.md"
+        }
     }
 ]
