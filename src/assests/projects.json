@@ -657,5 +657,62 @@
         "online_resources": {
             "documentation": "https://github.com/muhammad-abdullah11/easy-shop/blob/main/README.md"
         }
+    },
+    {
+        "id": "13",
+        "title": "Inventory-MS",
+        "category": "Management / Productivity",
+        "type": "Web Application",
+        "icon": "Package",
+        "thumbnail": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1553413766-47583c4531d0?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A professional-grade Inventory Management System engineered for seamless stock tracking and business efficiency. InventoryMS features a high-performance dashboard, full product and category life-cycle management, and an advanced historical transaction engine, all delivered through a premium enterprise-level interface with zero backend dependency.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React 18",
+                "Vite",
+                "Tailwind CSS v4",
+                "React Router 6"
+            ],
+            "backend": [
+                "Static (Client-side only)"
+            ],
+            "services": [
+                "LocalStorage Persistence Engine",
+                "Custom CSV Export Utility",
+                "React Icons"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Inventory Management",
+            "Admin Dashboard",
+            "Local Persistence",
+            "Responsive Design"
+        ],
+        "links": {
+            "github": "https://github.com/muhammad-abdullah11/inventory-management-system",
+            "live": "https://inventroo.vercel.app/"
+        },
+        "ui_features": [
+            "Enterprise-grade Dashboard with Real-time Metrics",
+            "Advanced Product CRUD with Category Relationships",
+            "Sophisticated Manual Stock Adjustment Module",
+            "Comprehensive Transaction Logging & Filtering System",
+            "Premium Slate-themed Sidebar Navigation",
+            "Built-in System Reset and Local Data Clearing"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/muhammad-abdullah11/inventory-management-system/blob/main/README.md"
+        }
     }
 ]
