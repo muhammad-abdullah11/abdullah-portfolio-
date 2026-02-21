@@ -13,15 +13,15 @@ const Project = () => {
   const { scrollYProgress } = useScroll();
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // }, [id]);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [id]);
 
   if (!project) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-white">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center">
-          <h2 className="text-3xl font-bold mb-6 text-[#2d3a33]">Project not found</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[#2d3a33]">Project not found</h2>
           <Link to="/recent-work" className="px-8 py-3 bg-[#a4c3b2] text-white rounded-full font-bold">
             Back to recent-work
           </Link>
@@ -55,7 +55,7 @@ const Project = () => {
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                 className="mb-8"
               >
-                <span className="px-6 py-2 rounded-full border border-[#a4c3b2]/20 bg-white shadow-sm text-[10px] font-black uppercase tracking-[0.4em] text-[#6b8e7d]">
+                <span className="px-6 py-2 rounded-full border border-[#a4c3b2]/20 bg-white shadow-sm text-[9px] font-black uppercase tracking-[0.4em] text-[#6b8e7d]">
                   {project.category}
                 </span>
               </motion.div>
@@ -65,7 +65,7 @@ const Project = () => {
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                  className="text-5xl md:text-8xl lg:text-[10rem] font-black leading-[0.8] tracking-tightest text-[#1b2521] uppercase"
+                  className="text-4xl md:text-7xl lg:text-[9rem] font-black leading-[0.8] tracking-tightest text-[#1b2521] uppercase"
                 >
                   {project.title}
                 </motion.h1>
@@ -93,7 +93,7 @@ const Project = () => {
                 transition={{ delay: 1 }}
                 className="max-w-3xl mb-12"
               >
-                <p className="text-[#4a5d52] text-lg md:text-2xl leading-relaxed font-medium italic opacity-80 px-4">
+                <p className="text-[#4a5d52] text-base md:text-xl leading-relaxed font-medium italic opacity-80 px-4">
                   "{project.description}"
                 </p>
               </motion.div>
@@ -101,12 +101,12 @@ const Project = () => {
               <div className="flex flex-wrap justify-center gap-6 md:gap-10 items-center px-4">
                 {project.links.live && (
                   <MagneticButton href={project.links.live} primary>
-                    Launch <FaChevronRight className="text-lg" />
+                    Launch <FaChevronRight className="text-base" />
                   </MagneticButton>
                 )}
                 {project.links.github && (
                   <MagneticButton href={project.links.github}>
-                    Code <FaGithub className="text-2xl" />
+                    Code <FaGithub className="text-xl" />
                   </MagneticButton>
                 )}
               </div>
@@ -114,7 +114,7 @@ const Project = () => {
           </div>
         </section>
 
-        <section className="py-10 px-4 bg-red-400 border-y border-[#f1f5f3]">
+        <section className="py-10 px-4 border-y border-[#f1f5f3]">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-10 md:gap-20">
               <DetailCard
@@ -144,10 +144,10 @@ const Project = () => {
                       whileHover={{ x: 10 }}
                       className="flex items-center gap-4 md:gap-6 group/item"
                     >
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-[#a4c3b2] text-lg md:text-xl font-black">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-[#a4c3b2] text-base md:text-lg font-black">
                         0{i + 1}
                       </div>
-                      <p className="text-white/80 font-medium text-sm md:text-base leading-snug">{feature}</p>
+                      <p className="text-white/80 font-medium text-xs md:text-sm leading-snug">{feature}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -164,10 +164,10 @@ const Project = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <h2 className="hidden md:block text-[12rem] font-black text-[#1b2521] tracking-tighter mb-4 leading-none opacity-[0.03] absolute left-0 right-0 top-1/2 -translate-y-1/2 uppercase select-none pointer-events-none">
+              <h2 className="hidden md:block text-[11rem] font-black text-[#1b2521] tracking-tighter mb-4 leading-none opacity-[0.03] absolute left-0 right-0 top-1/2 -translate-y-1/2 uppercase select-none pointer-events-none">
                 Artifacts
               </h2>
-              <h2 className="text-5xl md:text-9xl font-black text-[#1b2521] tracking-tighter relative z-10 uppercase">
+              <h2 className="text-4xl md:text-8xl font-black text-[#1b2521] tracking-tighter relative z-10 uppercase">
                 Visuals
               </h2>
               <div className="w-24 h-[1px] bg-[#a4c3b2] mx-auto mt-6 md:mt-10" />
@@ -209,7 +209,7 @@ const Project = () => {
                 className="max-w-full max-h-[90vh] object-contain rounded-2xl md:rounded-[4rem] shadow-2xl"
               />
               <button
-                className="absolute top-4 right-4 md:top-0 md:right-0 p-4 md:p-10 text-[#2d3a33] text-3xl md:text-6xl"
+                className="absolute top-4 right-4 md:top-0 md:right-0 p-4 md:p-10 text-[#2d3a33] text-2xl md:text-5xl"
                 onClick={() => setSelectedImage(null)}
               >
                 <FaTimes />
@@ -230,7 +230,7 @@ const MagneticButton = ({ children, href, primary }) => (
     rel="noreferrer"
     whileHover={{ y: -5, scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
-    className={`px-8 md:px-16 py-4 md:py-8 rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.4em] flex items-center gap-4 transition-all duration-500 shadow-xl ${primary
+    className={`px-8 md:px-16 py-4 md:py-8 rounded-full font-black text-[9px] md:text-[11px] uppercase tracking-[0.4em] flex items-center gap-4 transition-all duration-500 shadow-xl ${primary
       ? "bg-[#a4c3b2] text-white"
       : "bg-white text-[#4a5d52] border-2 border-[#f1f5f3] hover:border-[#a4c3b2]"
       }`}
@@ -253,13 +253,13 @@ const DetailCard = ({ title, subtitle, icon, color, children, dark }) => {
     >
       <header className="flex flex-col mb-12 md:mb-20 relative z-10">
         <div
-          className="w-16 h-16 md:w-20 md:h-20 rounded-[1.5rem] md:rounded-[2.5rem] flex items-center justify-center text-white text-2xl md:text-3xl mb-8 shadow-lg"
+          className="w-16 h-16 md:w-20 md:h-20 rounded-[1.5rem] md:rounded-[2.5rem] flex items-center justify-center text-white text-xl md:text-2xl mb-8 shadow-lg"
           style={{ backgroundColor: color }}
         >
           {icon}
         </div>
-        <h3 className="text-4xl md:text-6xl font-black mb-2 tracking-tighter uppercase">{title}</h3>
-        <p className="text-[#a4c3b2] font-black uppercase tracking-[0.4em] text-[10px]">{subtitle}</p>
+        <h3 className="text-3xl md:text-5xl font-black mb-2 tracking-tighter uppercase">{title}</h3>
+        <p className="text-[#a4c3b2] font-black uppercase tracking-[0.4em] text-[9px]">{subtitle}</p>
       </header>
 
       <div className="relative z-10">
@@ -271,12 +271,12 @@ const DetailCard = ({ title, subtitle, icon, color, children, dark }) => {
 
 const StackCategory = ({ title, items }) => (
   <div className="group/cat">
-    <h4 className="text-xl font-black uppercase tracking-[0.5em] text-[#a4c3b2] mb-6 md:mb-8">{title}</h4>
+    <h4 className="text-lg font-black uppercase tracking-[0.5em] text-[#a4c3b2] mb-6 md:mb-8">{title}</h4>
     <div className="flex flex-wrap gap-3 md:gap-4">
       {items.map((item, i) => (
         <div
           key={i}
-          className="px-6 md:px-8 py-2 rounded-xl md:rounded-2xl bg-white border border-[#f1f5f3] text-[#2d3a33] font-bold text-xs shadow-sm"
+          className="px-6 md:px-8 py-2 rounded-xl md:rounded-2xl bg-white border border-[#f1f5f3] text-[#2d3a33] font-bold text-[11px] shadow-sm"
         >
           {item}
         </div>
@@ -311,7 +311,7 @@ const ParallaxMedia = ({ src, index, type, onClick }) => {
         />
 
         <div className="absolute top-4 right-4 md:top-8 md:right-8 z-20">
-          <span className="text-[#a4c3b2] text-5xl md:text-8xl font-black italic opacity-20 select-none">
+          <span className="text-[#a4c3b2] text-4xl md:text-7xl font-black italic opacity-20 select-none">
             0{index + 1}
           </span>
         </div>
