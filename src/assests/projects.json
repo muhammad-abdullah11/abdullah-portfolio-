@@ -600,5 +600,62 @@
         "online_resources": {
             "documentation": "https://github.com/muhammad-abdullah11/pookie-games/blob/main/README.md"
         }
+    },
+    {
+        "id": "11",
+        "title": "shopyee",
+        "category": "E-commerce / Lifestyle",
+        "type": "Web Application",
+        "icon": "ShoppingBag",
+        "thumbnail": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A sophisticated platform merging a modern fashion e-commerce experience with curated travel and lifestyle guides. shopyee provides a seamless transition from exploring the latest trends in Men’s, Women’s, and Junior’s apparel to discovering hand-picked global travel destinations through an editorial-style interface.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite 8",
+                "Tailwind CSS v4",
+                "React Router 7"
+            ],
+            "backend": [
+                "Static (Client-side only)"
+            ],
+            "services": [
+                "REST Countries API",
+                "Local JSON Data Engine",
+                "React Icons"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "E-commerce",
+            "Travel Guides",
+            "Lifestyle",
+            "Responsive Style"
+        ],
+        "links": {
+            "github": "https://github.com/muhammad-abdullah11/shopyee",
+            "live": "https://shopyee.vercel.app/"
+        },
+        "ui_features": [
+            "Dynamic Category-driven Navigation System",
+            "Curated Editorial Travel Experiences",
+            "Real-time Country Data Integration via REST API",
+            "Modern Tailwind CSS v4 Fluid Design Language",
+            "Responsive Product and Discovery Grids",
+            "Seamless Page Transitions with React Router 7"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/muhammad-abdullah11/easy-shop/blob/main/README.md"
+        }
     }
 ]
