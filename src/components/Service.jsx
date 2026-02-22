@@ -104,12 +104,14 @@ const SkillCard = ({ skill, index, isVisible }) => {
   return (
     <motion.div
       layout
+      drag
+      onDragEnd={() => setIsHovered(false)}
       initial={{ opacity: 0, y: 60, rotateX: -15 }}
-      animate={isVisible ? { 
-        opacity: 1, 
-        y: 0, 
+      animate={isVisible ? {
+        opacity: 1,
+        y: 0,
         rotateX: 0,
-        transition: { 
+        transition: {
           duration: 0.8,
           delay: index * 0.1,
           ease: [0.25, 0.25, 0.25, 0.75]
@@ -121,7 +123,7 @@ const SkillCard = ({ skill, index, isVisible }) => {
     >
       <motion.div
         className={`relative p-8 ${skill.bgColor} rounded-2xl shadow-lg border ${skill.borderColor} hover:shadow-2xl transition-all duration-300 transform-gpu`}
-        whileHover={{ 
+        whileHover={{
           y: -12,
           rotateY: 5,
           transition: { duration: 0.3, ease: "easeOut" }
@@ -136,7 +138,7 @@ const SkillCard = ({ skill, index, isVisible }) => {
         />
 
         {/* Icon with Floating Animation */}
-        <motion.div 
+        <motion.div
           className="relative z-10 mb-6 flex justify-between items-start"
           animate={isHovered ? {
             scale: [1, 1.1, 1],
@@ -157,7 +159,7 @@ const SkillCard = ({ skill, index, isVisible }) => {
           >
             {skill.icon}
           </motion.div>
-          
+
           {/* Skill Level Badge */}
           <motion.div
             className={`bg-gradient-to-r ${skill.color} text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg`}
@@ -171,7 +173,7 @@ const SkillCard = ({ skill, index, isVisible }) => {
         </motion.div>
 
         {/* Title */}
-        <motion.h3 
+        <motion.h3
           className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-red-600 group-hover:to-red-800 transition-all duration-300"
           whileHover={{ x: 5 }}
         >
@@ -179,7 +181,7 @@ const SkillCard = ({ skill, index, isVisible }) => {
         </motion.h3>
 
         {/* Description */}
-        <motion.p 
+        <motion.p
           className="text-gray-700 mb-6 leading-relaxed"
           initial={{ opacity: 0.8 }}
           whileHover={{ opacity: 1 }}
@@ -199,7 +201,7 @@ const SkillCard = ({ skill, index, isVisible }) => {
               transition={{ duration: 1.5, delay: index * 0.1 + 0.5, ease: "easeOut" }}
             />
           </div>
-          
+
           {/* Category Tag */}
           <motion.span
             className="absolute -top-8 right-0 text-xs font-semibold text-gray-500 bg-white px-2 py-1 rounded-full border"
@@ -221,7 +223,7 @@ const SkillCard = ({ skill, index, isVisible }) => {
 };
 
 const CategoryFilter = ({ categories, activeCategory, setActiveCategory }) => (
-  <motion.div 
+  <motion.div
     className="flex flex-wrap justify-center gap-4 mb-12"
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
@@ -231,11 +233,10 @@ const CategoryFilter = ({ categories, activeCategory, setActiveCategory }) => (
       <motion.button
         key={category}
         onClick={() => setActiveCategory(category)}
-        className={`px-8 py-3 rounded-full font-bold transition-all shadow-lg ${
-          activeCategory === category
-            ? "bg-gradient-to-r from-red-500 to-red-600 text-white shadow-red-200 transform scale-105"
-            : "bg-white text-gray-700 hover:bg-red-50 hover:text-red-600 hover:shadow-xl border border-gray-200"
-        }`}
+        className={`px-8 py-3 rounded-full font-bold transition-all shadow-lg ${activeCategory === category
+          ? "bg-gradient-to-r from-red-500 to-red-600 text-white shadow-red-200 transform scale-105"
+          : "bg-white text-gray-700 hover:bg-red-50 hover:text-red-600 hover:shadow-xl border border-gray-200"
+          }`}
         whileHover={{ scale: activeCategory === category ? 1.05 : 1.08, y: -2 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 20 }}
@@ -254,8 +255,8 @@ function WhatIDo() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const categories = ["All", ...new Set(skills.map(skill => skill.category))];
-  const filteredSkills = activeCategory === "All" 
-    ? skills 
+  const filteredSkills = activeCategory === "All"
+    ? skills
     : skills.filter(skill => skill.category === activeCategory);
 
   const containerVariants = {
@@ -272,11 +273,11 @@ function WhatIDo() {
 
   const titleVariants = {
     hidden: { opacity: 0, x: -100, rotateY: -90 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
       rotateY: 0,
-      transition: { 
+      transition: {
         duration: 1,
         ease: [0.25, 0.25, 0.25, 0.75]
       }
@@ -284,7 +285,7 @@ function WhatIDo() {
   };
 
   return (
-    <motion.section 
+    <motion.section
       ref={ref}
       className="py-20 px-6 relative bg-gradient-to-br from-gray-50 via-white to-red-50 overflow-hidden my-4"
       initial="hidden"
@@ -320,7 +321,7 @@ function WhatIDo() {
         {/* Header Section */}
         <div className="text-center mb-16">
           <motion.div variants={titleVariants}>
-            <motion.h2 
+            <motion.h2
               className="text-6xl md:text-7xl font-black mb-6 relative inline-block"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
@@ -328,7 +329,7 @@ function WhatIDo() {
               <span className="bg-gradient-to-r from-gray-900 via-red-600 to-gray-900 bg-clip-text text-transparent">
                 What I Do
               </span>
-              
+
               {/* Animated Underline */}
               <motion.div
                 className="absolute -bottom-4 left-0 h-2 bg-gradient-to-r from-red-500 to-red-600 rounded-full"
@@ -336,7 +337,7 @@ function WhatIDo() {
                 animate={isInView ? { width: "100%" } : { width: 0 }}
                 transition={{ duration: 1.2, delay: 1 }}
               />
-              
+
               {/* Glowing Effect */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl"
@@ -353,23 +354,23 @@ function WhatIDo() {
             </motion.h2>
           </motion.div>
 
-         
+
         </div>
 
         {/* Category Filter */}
-        <CategoryFilter 
+        <CategoryFilter
           categories={categories}
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
         />
 
         {/* Skills Grid */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
         >
           {filteredSkills.map((skill, index) => (
-            <SkillCard 
+            <SkillCard
               key={skill.title}
               skill={skill}
               index={index}
@@ -378,7 +379,7 @@ function WhatIDo() {
           ))}
         </motion.div>
 
-        
+
       </div>
     </motion.section>
   );
